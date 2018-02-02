@@ -4,14 +4,17 @@
 function tambah($int1,$int2){
   return $int1+$int2;
 }
+
 //function kurang
 function kurang($int1,$int2){
   return $int1-$int2;
 }
+
 //function kali
 function kali($int1,$int2){
   return $int1*$int2;
 }
+
 //function bagi
 function bagi($int1,$int2){
   return $int1/$int2;
@@ -31,3 +34,6 @@ echo kali($a,$b);
 echo bagi($a,$b);
 
 echo tambah(10,30);
+echo kurang(30,10);
+echo kali(20,20;
+echo bagi(20,5);
