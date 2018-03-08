@@ -1,12 +1,12 @@
 <?php
 function mengambilurl($tipe){
 	if(isset($_SERVER['HTTPS'])){
-    $protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
+		$protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
 	}else{
 		$protocol = 'http';
 	}
   
-  if($tipe=="0"){
+	if($tipe=="0"){
 		$url = $protocol . "://" . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; //default
 	}elseif($tipe=="1"){ 
 		$url = $protocol; //protokol
@@ -18,7 +18,7 @@ function mengambilurl($tipe){
 		$url = $protocol . "://" . $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; //default
 	}
 	
-  return $url;
+	return $url;
 }
 
 echo mengambilurl(1);
