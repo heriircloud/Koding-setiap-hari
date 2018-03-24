@@ -5,30 +5,28 @@ $db_name	= '';//db_test
 $db_user	= '';//root
 $db_pass	= '';//password
 $hosting 	= '';//www.yourdomain.com
-$local 		= '';//localhost
 
 define('DB_HOST', $db_host, TRUE);
 define('DB_NAME', $db_name, TRUE);
 define('DB_USER', $db_user, TRUE);
 define('DB_PASS', $db_pass, TRUE);
 define('HOSTING', $hosting, TRUE);
-define('LOCAL', $local, TRUE);
 
 //bisa dipisah asal di include/require
 //function.php
 function database(){
     $root = $_SERVER['HTTP_HOST'];
-    if($root == DOMAIN1){
+    if($root == HOSTING){
         $host =     DB_HOST;
         $name =     DB_NAME;
         $user =     DB_USER;
         $pass =     DB_PASS;
         $connect = array($host,$name,$user,$pass);
         return $connect;
-    }elseif($root == DOMAIN2){
-        $host =     '';
-        $name =     '';
-        $user =     '';
+    }elseif($root == 'localhost'){
+        $host =     'localhost';
+        $name =     'dbname';
+        $user =     'root';
         $pass =     '';
         $connect = array($host,$name,$user,$pass);
         return $connect;
