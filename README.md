@@ -1,2 +1,2 @@
-# Koding-setiap-hari
+# my php function
 latihan
